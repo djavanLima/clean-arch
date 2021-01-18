@@ -1,0 +1,19 @@
+def springRelease = '2.3.4.RELEASE'
+
+dependencies {
+    compile project(':usecases')
+    compile project(':models')
+
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    testCompile 'org.projectlombok:lombok:1.18.8'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springRelease
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: springRelease
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
+
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+}
